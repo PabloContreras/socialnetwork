@@ -33,7 +33,7 @@
                                                             </span>
                                                         @endif
                                                     </div>
-                                                    <input type="submit" class="pull-right btn btn-primary" />
+                                                    <input type="submit" class="pull-right btn btn-primary" style="background-color: #CBAB7A; border-color: #CBAB7A;"/>
                                                 </form>
                                             </div>
                                             </div>
