@@ -68,7 +68,7 @@
                     <nav class="classy-navbar justify-content-between" id="palatinNav">
 
                         <!-- Nav brand -->
-                        <a href="{{ url('inicio') }}" class="nav-brand"><img src="{{asset('img/core-img/logo.png')}}" alt=""></a>
+                        <a href="https://networkcoworking.com/" class="nav-brand"><img src="{{asset('img/core-img/logo.png')}}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -86,8 +86,8 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li {{Request::getPathInfo()  == '/about' ? ' class=active' : '' }}> <a href="{{ url('about') }}">Acerca de</a></li>
-                                    <li {{Request::getPathInfo()  == '/servicios' ? ' class=active' : '' }}><a href="{{ url('servicios') }}">Servicios</a></li>
+                                    <li {{Request::getPathInfo()  == '/about' ? ' class=active' : '' }}> <a href="https://networkcoworking.com/about">Acerca de</a></li>
+                                    <li {{Request::getPathInfo()  == '/servicios' ? ' class=active' : '' }}><a href="https://networkcoworking.com/servicios">Servicios</a></li>
                                     <li><a href="#">Alianzas</a>
                                         <div class="megamenu" style="height: 300px; text-align:center;   ">
                                             <ul class="single-mega cn-col-5" style="height: 250px">
@@ -109,7 +109,7 @@
                                         </div>
                                     </li>
                                     <!--<li><a href="#membresia">Membresías</a></li>-->
-                                    <li {{Request::getPathInfo()  == '/contacto' ? ' class=active' : '' }}><a href="{{ url('contacto') }}">Contacto</a></li>
+                                    <li {{Request::getPathInfo()  == '/contacto' ? ' class=active' : '' }}><a href="https://networkcoworking.com/contacto">Contacto</a></li>
                                 </ul>
 
                                 <!-- Button -->
