@@ -8,6 +8,7 @@ use App\Post;
 use Auth;
 use Illuminate\Http\Request;
 use Image;
+use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
