@@ -22,7 +22,7 @@
                                             </span>
                                         @endif
                                         <br>
-                                        <input type="file" name="image">
+                                        <input type="file" name="image" style="color: black;">
                                     </div>
                                     <input type="submit" class="pull-right btn btn-primary" style="background-color: #CBAB7A; border-color: #CBAB7A;" />
                                 </form>

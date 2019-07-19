@@ -13,7 +13,7 @@
                                 {{ csrf_field() }}
                                 <center><label style="color: black;">Actualizar foto de perfil</label></center>
                                 <input type="file" name="avatar" class="btn-block">
-                                <input type="submit" value="Actualizar" class="pull-right btn btn-xs btn-default">
+                                <input type="submit" value="Actualizar" class="pull-right btn btn-xs btn-default" style="color: black;">
                             </form>
                         </li>
                     @endif
