@@ -26,7 +26,7 @@ class CommentsController extends Controller
             ->select('comments.*', 'users.name', 'users.username')
             ->distinct()->get();
 
-        //return $comments;
+        //return $post;
         if (isset($comments)) {
         	return view('auth.show',['post' => $post, 'user' => $user, 'comments' => $comments, ]);
         }

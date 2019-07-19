@@ -20,6 +20,9 @@
                     <p class="card-text">
                        <h2><a href="{{ url('posts/'.$post->id) }}"> {!! $post->body !!} </a></h2>
                     </p>
+                    @if( $post->image != 'null')
+                        <center><img class="media-object" src="{{ asset('uploads/posts/'.$post->image.'/') }}" alt="avatar" style="width: 50%; height: 50%;"></center>
+                    @endif
                 </div>
                 <div class="card-footer">
                     @include('auth.partials.like')
@@ -36,6 +39,7 @@
                             {{ method_field('DELETE') }}
                         </form>
                     @endif
+
                     </div>
                 </div>
             </div>

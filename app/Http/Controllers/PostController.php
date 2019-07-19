@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
-
+use Image;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 
 class PostController extends Controller
@@ -28,15 +29,21 @@ class PostController extends Controller
             'body' => 'required|max:255',
         ]);
 
-        /*$post = Post::create([
-            'user_id' => auth()->user()->id,
-            'body' => $request->body,
-        ]);*/
         $post = new Post();
+        if ($request->image) {
+            $image = $request->image;
+            $filename = time() . '.' . $image->extension();
+            Image::make($image)->resize(250, 250)->save(public_path('/uploads/posts/' . $filename));
+
+            $post->image = $filename;
+        }else{
+            $post->image = 'null';
+        }
+
+        
         $post->user_id = auth()->user()->id;
         $post->body = $request->body;
         $post->save();
-
         return back();
     }
     /**
@@ -45,8 +52,10 @@ class PostController extends Controller
      * @param  Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
+        $post = Post::find($id);
+        //return $post;
         $post->delete();
         return back();
     }

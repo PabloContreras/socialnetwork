@@ -23,12 +23,13 @@ Route::post('/{id}', 'ProfileController@updateAvatar');
 
 Route::post('/', 'PostController@store');
 
-Route::delete('/posts/{post}', 'PostController@destroy');
+Route::delete('/posts/{id}/eliminar_post', 'PostController@destroy');
 
 
 Route::get('/posts/{id}', 'CommentsController@create');
 
 Route::post('/posts/{id}', 'CommentsController@store');
+
 
 
 
