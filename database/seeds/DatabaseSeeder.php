@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        DB::table('admins')->insert([
+            'name' => 'Pablo Contreras',
+            'email' => 'pablo_contreras_1997@outlook.com',
+            'password' => bcrypt('Lapatita9'),
+        ]);
+
         DB::table('users')->insert([
             'name' => 'Pablo Contreras',
             'username' => 'PabloContreras',
@@ -24,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('Lapatita9'),
         ]);
         DB::table('users')->insert([
-            'name' => 'Otro Pablo', 
+            'name' => 'Otro Pablo',
             'username' => 'PabloContreras2',
             'email' => 'pablo@outlook.com',
             'password' => bcrypt('Lapatita9'),
