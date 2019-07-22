@@ -104,15 +104,14 @@
 
       @yield('content')
 
-<footer class="footer">
+      <footer class="footer">
         <div class="container-fluid">
-          <div class="copyright float-right">
+         <p class="copyright text-center">
             &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, Hecho con <i class=" material-icons red600" > favorite</i> por
-            <a href="https://www.eostechnology.mx" target="_blank">EOS Technology</a>
-          </div>
+          <script>
+            document.write(new Date().getFullYear())
+          </script>, Hecho con <i class="fa fa-heart" style="color: red;"></i> & <i class="fa fa-coffee" style="color: black;"></i> por <a href="https://www.eostechnology.mx" target="_blank">EOS Technology</a>.
+        </p>
         </div>
       </footer>
     </div>

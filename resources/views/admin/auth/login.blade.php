@@ -160,8 +160,12 @@
                 <!-- Copywrite Text -->
                 <div class="col-12">
                     <div class="copywrite-text mt-30">
-                        <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Desarrollado <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">EOS</a></p>
+                        <p class="copyright text-center">
+                            &copy;
+                          <script>
+                            document.write(new Date().getFullYear())
+                          </script>, Hecho con <i class="fa fa-heart" style="color: red;"></i> & <i class="fa fa-coffee" style="color: black;"></i> por <a href="https://www.eostechnology.mx" target="_blank">EOS Technology</a>.
+                        </p>
                     </div>
                 </div>
             </div>
