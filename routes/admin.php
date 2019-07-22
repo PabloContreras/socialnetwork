@@ -1,14 +1,14 @@
 <?php
 
-Route::get('/home', function () {
+Route::get('/admin/login', function () {
     $users[] = Auth::user();
     $users[] = Auth::guard()->user();
     $users[] = Auth::guard('admin')->user();
 
     //dd($users);
 
-    return view('admin.home');
-})->name('home');
+    return view('admin.login');
+});
 Route::get ('/perfilAdmin','adminController@admindatos');
 Route::put('/{id}/update','adminController@update');
 Route::get('/showForm/admin', 'adminController@showFormForAdmin');

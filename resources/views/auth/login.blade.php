@@ -58,75 +58,7 @@
         </div>
     </div>
 
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-        <!-- Navbar Area -->
-        <div class="palatin-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="palatinNav">
-
-                        <!-- Nav brand -->
-                        <a href="https://networkcoworking.com/" class="nav-brand"><img src="{{asset('img/core-img/logo.png')}}" alt=""></a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- close btn -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li {{Request::getPathInfo()  == '/about' ? ' class=active' : '' }}> <a href="https://networkcoworking.com/about">Acerca de</a></li>
-                                    <li {{Request::getPathInfo()  == '/servicios' ? ' class=active' : '' }}><a href="https://networkcoworking.com/servicios">Servicios</a></li>
-                                    <li><a href="#">Alianzas</a>
-                                        <div class="megamenu" style="height: 300px; text-align:center;   ">
-                                            <ul class="single-mega cn-col-5" style="height: 250px">
-<li><a href="http://ibctoluca.com/ibc/public/index.php" target="_blank"><img src="{{ asset('img/img-menu/01.png')}}"></a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-5"style="height: 250px">
-<li style="height: 250px"><a href="https://www.centrodenegociostoluca.com.mx/" target="_blank"><img src="{{ asset('img/img-menu/02.png')}}"></a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-5"style="height: 250px">
-<li><a href="https://www.facebook.com/RegginaToluca/" target="_blank"><img src="{{ asset('img/img-menu/03.png')}}"></a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-5"style="height: 250px">
-<li><a href="http://eostechnology.com.mx" target="_blank"><img src="{{ asset('img/img-menu/04.png')}}"></a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-5" style="height: 250px">
-<li><a href="https://www.facebook.com/Oh-lal%C3%A1-Hair-Salon-Metepec-347235112046333/" target="_blank"><img src="{{ asset('img/img-menu/05.png')}}"></a></li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <!--<li><a href="#membresia">Membresías</a></li>-->
-                                    <li {{Request::getPathInfo()  == '/contacto' ? ' class=active' : '' }}><a href="https://networkcoworking.com/contacto">Contacto</a></li>
-                                </ul>
-
-                                <!-- Button -->
-                                <div class="menu-btn">
-                                    <a href="#" class="btn palatin-btn">RESERVA UNA VISITA</a>
-                                </div>
-                                <div class="menu-btn">
-                                   <a href="{{ url('login') }}"><i class="fas fa-user-alt"></i></a>
-                                </div>
-                            </div>
-                            <!-- Nav End -->
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+   
     <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url(/img/bg-img/2.png);">
         <div class="bradcumbContent text-center">
             <h2>Bienvenido</h2>
@@ -223,17 +155,6 @@
                     <div class="footer-widget-area mt-50">
                         <h6 class="widget-title mb-5">Encuéntranos en el mapa</h6>
                         <img src="/img/bg-img/footer-map.png" alt="">
-                    </div>
-                </div>
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Suscríbete a nuestro boletín</h6>
-                        <form action="#" method="post" class="subscribe-form">
-                            <input type="email" name="subscribe-email" id="subscribeemail" placeholder="Tu E-mail">
-                            <button type="submit">Suscríbete</button>
-                        </form>
                     </div>
                 </div>
 

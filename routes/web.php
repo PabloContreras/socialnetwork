@@ -14,6 +14,10 @@
 
 
 Auth::routes();
+Route::post('/logout', function(){
+  Auth::logout();
+  return redirect('/login');
+});
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/{id}', 'ProfileController@show');
@@ -54,9 +58,14 @@ Route::get('/posts/{post}/like', 'LikeController@likePost');
 });
 */
 Route::group(['prefix' => 'admin'], function () {
-  Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
+  Route::get('/login', 'AdminAuth\LoginController@showLoginForm');
   Route::post('/login', 'AdminAuth\LoginController@login');
-  Route::post('/logout', 'AdminAuth\LoginController@logout')->name('logout');
+  Route::post('/logout', 'AdminAuth\LoginController@logout');
+  
+  /*Route::post('/logout', function(){
+    Auth::logout();
+    return redirect('/admin/login');
+  });*/
 
   Route::get('/register', 'AdminAuth\RegisterController@showRegistrationForm')->name('register');
   Route::post('/register', 'AdminAuth\RegisterController@register');
