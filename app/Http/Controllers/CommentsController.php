@@ -23,10 +23,10 @@ class CommentsController extends Controller
         //$comments = comments::where('post_id',$post->id)->get();
         $comments = DB::table('comments')
             ->join('users', 'comments.commenter_id', '=', 'users.id')
-            ->select('comments.*', 'users.name', 'users.username')
+            ->select('comments.*', 'users.name', 'users.username', 'users.avatar')
             ->distinct()->get();
 
-        //return $post;
+        //return $comments;
         if (isset($comments)) {
         	return view('auth.show',['post' => $post, 'user' => $user, 'comments' => $comments, ]);
         }

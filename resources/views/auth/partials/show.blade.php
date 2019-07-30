@@ -56,7 +56,7 @@
                 <div class="card-body">
                     <div class="pull-left">
                         <a href="{{ url('/'.$comment->commenter_id) }}">
-                            <img class="media-object" src="/uploads/avatars/{{ $user->avatar }}" alt="avatar" style="width: 64px; height: 64px;">
+                            <img class="media-object" src="/uploads/avatars/{{ $comment->avatar }}" alt="avatar" style="width: 64px; height: 64px;">
                         </a>
                     </div>
                     <p class="card-text">
