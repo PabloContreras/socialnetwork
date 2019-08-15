@@ -36,22 +36,28 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
 
-          <li class="nav-item ">
+          <li class="nav-item {{ Request::path() == 'admin/perfilAdmin' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/admin/perfilAdmin')}}">
               <i class="material-icons">person</i>
               <p>Perfil del administrador</p>
             </a>
           </li>
-          <li class="nav-item   ">
+          <li class="nav-item {{ Request::path() == 'admin/showForm/admin' ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('/admin/showForm/admin') }}">
               <i class="material-icons">add</i>
               <p>Crear administrador</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {{ Request::path() == 'admin/usuarios' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/admin/usuarios')}}">
               <i class="material-icons">content_paste</i>
               <p>Lista de usuarios</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Request::path() == 'admin/publicaciones' ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('/admin/publicaciones')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Publicaciones</p>
             </a>
           </li>
         </ul>

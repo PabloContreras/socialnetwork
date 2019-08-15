@@ -39,7 +39,7 @@ class PostController extends Controller
         }else{
             $post->image = 'null';
         }
-
+        $post->activo = 0;
         
         $post->user_id = auth()->user()->id;
         $post->body = $request->body;
@@ -60,13 +60,6 @@ class PostController extends Controller
         return back();
     }
 
-    /*public function show($id){
-        $post = Post::find($id);
-        $user_id = Post::find($id)->user_id;
-        $user = User::find($user_id);
-        return view('auth.show',['post' => $post, 'user' => $user]);
-    }*/
-
 
     /**
      * Parse usernames from post body.
@@ -76,20 +69,6 @@ class PostController extends Controller
      */
     private function parseUsernames($postBody)
     {
-        /*preg_match_all("/@(\\w+)/", $postBody, $usernames);
-
-        if (!empty($usernames)) {
-            foreach ($usernames[1] as $username) {
-                if (!User::whereUsername($username)->get()->isEmpty()) {
-                    $postBody = preg_replace("/(@\\w+)/", '<a href="/' . $username . '">${1}</a>', $postBody);
-                    // Notify
-                    $recipient = User::whereUsername($username)->first();
-                    $sender = Auth::user();
-                    Mail::to($recipient)->send(new PostReply($recipient, $sender));
-                }
-            }
-        }*/
-
         return $postBody;
     }
 
@@ -101,25 +80,36 @@ class PostController extends Controller
      */
     private function parseTags($postBody)
     {
-        /*preg_match_all("/#(\\w+)/", $postBody, $tagnames);
-
-        $tagIds = [];
-
-        if (!empty($tagnames[1])) {
-            foreach ($tagnames[1] as $tagname) {
-                if (Tag::whereName($tagname)->get()->isEmpty()) {
-                    $tag = new Tag();
-                    $tag->name = $tagname;
-                    $tag->save();
-                    $tagIds[] = $tag->id;
-                } else {
-                    $tag = Tag::whereName($tagname)->first();
-                    $tagIds[] = $tag->id;
-                }
-                $postBody = preg_replace("/(#\\w+)/", '<a href="/tags/' . $tag->id . '">${1}</a>', $postBody);
-            }
-        }*/
 
         return $postBody;
     }
+    /*
+    **          Lógica para administrador
+    */
+    public function indexForAdmin(){
+        $publicaciones = Post::all();
+        return view('admin.publicaciones.index', compact('publicaciones'));
+    }
+    public function destroyForAdmin($id){
+        $post = Post::find($id);
+        $post->delete();
+        return back();
+    }
+    public function aprobarForAdmin($id){
+         $post = Post::find($id);
+         $post->activo = 1;
+         $post->save();
+         return back();
+    }
+    public function desaprobarForAdmin($id){
+         $post = Post::find($id);
+         $post->activo = 0;
+         $post->save();
+         return back();
+    }
+    public function showForAdmin($id){
+        $post = Post::find($id);
+        return view('admin.publicaciones.show', compact('post'));
+    }
+
 }

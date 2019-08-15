@@ -17,9 +17,15 @@
                             <img class="media-object" src="/uploads/avatars/{{ $user->avatar }}" alt="avatar" style="width: 64px; height: 64px;">
                         </a>
                     </div>
+                    @if($post->activo === 1)
                     <p class="card-text">
                        <h2><a href="{{ url('posts/'.$post->id) }}"> {!! $post->body !!} </a></h2>
                     </p>
+                    @else
+                    <p class="card-text">
+                       <h2><a href="{{ url('posts/'.$post->id) }}"> La publicación no ha sido revisada o no se autorizó por contenido inapropiado </a></h2>
+                    </p>
+                    @endif
                     @if( $post->image != 'null')
                         <center><img class="media-object" src="{{ asset('uploads/posts/'.$post->image.'/') }}" alt="avatar" style="width: 50%; height: 50%;"></center>
                     @endif

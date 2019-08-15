@@ -24,6 +24,9 @@
                         <th>
                           usuario
                         </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                       </thead>
                       <tbody>
                         @foreach($usuarios as $usuario)

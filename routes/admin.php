@@ -34,6 +34,12 @@ Route::put('/usuarios/{id}/update', 'usuariosController@usuarioUpdate');
 
 Route::post('/usuarios/{id}/ver','usuariosController@verUsuario');
 
+Route::get('/publicaciones', 'PostController@indexforadmin');
+Route::delete('/publicaciones/{id}/eliminar', 'PostController@destroyForAdmin');
+Route::post('/publicaciones/{id}/aprobar', 'PostController@aprobarForAdmin');
+Route::post('/publicaciones/{id}/desaprobar', 'PostController@desaprobarForAdmin');
+Route::get('/publicaciones/{id}/ver', 'PostController@showForAdmin');
+
 
 
 

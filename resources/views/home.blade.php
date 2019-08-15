@@ -67,7 +67,11 @@
                                                         <img class="media-object" src="{{ Request::is('tags/*') ? '../' : '' }}uploads/avatars/{{ $post->user->avatar }}" alt="avatar" style="width: 64px; height: 64px;">
                                                     </a>
                                                 </div>
-                                                <p class="card-text"> <h2><a href="{{ url('posts/'.$post->id) }}"> {!! $post->body !!} </a></h2></p>
+                                                @if($post->activo === 1)
+                                                    <p class="card-text"> <h2><a href="{{ url('posts/'.$post->id) }}"> {!! $post->body !!} </a></h2></p>
+                                                @else
+                                                    <p class="card-text"> <h2><a href="{{ url('posts/'.$post->id) }}"> La publicación no ha sido revisada o no se autorizó por contenido inapropiado </a></h2></p>
+                                                @endif
                                             </div>
                                             @if( $post->image != 'null')
                                                 <center><img class="media-object" src="{{ Request::is('tags/*') ? '../' : '' }}uploads/posts/{{ $post->image }}" alt="avatar" style="width: 50%; height: 50%;"></center>
