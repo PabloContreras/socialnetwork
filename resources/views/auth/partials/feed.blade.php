@@ -28,28 +28,7 @@
                         </div>
                     </div>
                 </div> 
-                @else
-                    <div class="col-md-12">              
-                        <div class="card border-primary mb-3" >
-                            <div class="card-header">
-                                <a href="{{ url($post->user->id) }}">
-                                    {{ $post->user->name }} <small> {{ '@' . $post->user->username }} </small>
-                                </a>
-                                <small style="color: black;"> &bull; {{ $post->created_at->diffForHumans() }} </small>
-                            </div>
-                            <div class="card-body">
-                                <div class="pull-left">
-                                    <a href="{{ url('/'.$post->user->id) }}">
-                                        <img class="media-object" src="{{ Request::is('tags/*') ? '../' : '' }}uploads/avatars/{{ $post->user->avatar }}" alt="avatar" style="width: 64px; height: 64px;">
-                                    </a>
-                                </div>
-                                <p class="card-text"> <h2><a href="{{ url('posts/'.$post->id) }}"> La publicación no ha sido revisada o no se autorizó por contenido inapropiado </a></h2></p>
-                            </div>
-                            <div class="card-footer">
-                               @include('auth.partials.like')
-                            </div>
-                        </div>
-                    </div> 
+                
                 @endif
             @endforeach
             {{ $posts->links() }}
