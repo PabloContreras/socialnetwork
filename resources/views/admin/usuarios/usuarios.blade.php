@@ -45,7 +45,7 @@
                               <form action="{{ '/admin/usuarios/'.$usuario->id.'/eliminar' }}" method="post" >
                                 {{csrf_field()}}
                                 {{ method_field('DELETE') }}
-                                <button type="submit" rel="tooltip" title="Eliminar Usuario" class="btn btn-primary btn-link btn-sm">
+                                <button type="submit" rel="tooltip" title="Eliminar Usuario" class="btn btn-success" style="background-color: transparent; border: none; color: #9c27b0;">
                                 <i class="material-icons">close</i>
                               </button>
                               </form>
@@ -53,7 +53,7 @@
                             <td>
                               <form action="{{url('/admin/usuarios/'.$usuario->id.'/actualizar')}}">
                                 {{ csrf_field() }}
-                                <button type="submit" rel="tooltip" title="Editar Usuario" class="btn btn-primary btn-link btn-sm">
+                                <button type="submit" rel="tooltip" title="Editar Usuario" class="btn btn-success " style="background-color: transparent; border: none; color: #9c27b0;">
                                 <i class="material-icons">edit</i>
                               </button>
                               </form>
@@ -61,7 +61,7 @@
                             <td>
                               <form action="{{url('/admin/usuarios/'.$usuario->id.'/ver')}}" method="post" >
                                 {{ csrf_field() }}
-                                <button type="submit" rel="tooltip" title="Ver usuario" class="btn btn-primary btn-link">
+                                <button type="submit" rel="tooltip" title="Ver usuario" class="btn btn-success" style="background-color: transparent; border: none; color: #9c27b0;">
                                   <i class="material-icons">face</i>
                                 </button>
                               </form>

@@ -54,7 +54,7 @@
                               <form action="{{ '/admin/publicaciones/'.$post->id.'/eliminar' }}" method="post" >
                                 {{csrf_field()}}
                                 {{ method_field('DELETE') }}
-                                <button type="submit" rel="tooltip" title="Eliminar publicación" class="btn btn-primary btn-link btn-sm">
+                                <button type="submit" rel="tooltip" title="Eliminar publicación" class="btn btn-success" style="background-color: transparent; border: none; color: #9c27b0;">
                                 <i class="material-icons">remove</i>
                               </button>
                               </form>

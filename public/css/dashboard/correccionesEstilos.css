@@ -1,0 +1,32 @@
+  .bg-network, .card-header-primary, .btn-primary {
+  	background: linear-gradient(to right, rgba(203,171,120,1) 0%, rgba(128,107,75,1) 100%) !important;
+  }
+
+  a{
+  	color: #cbab78;
+  }
+
+  a:hover{
+  	color: rgba(128,107,75,1);
+  }
+
+  .active a{
+  	background: linear-gradient(to right, rgba(203,171,120,1) 0%, rgba(128,107,75,1) 100%) !important;
+  }
+
+  .form-control, .is-focused .form-control{
+  	background-image: linear-gradient(to top, #cbab78 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+  }
+
+  .is-focused label{
+  	color: #cbab78 !important;
+  }
+
+  .card .card-header-primary .card-icon, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card .card-header-primary .card-text, .sidebar[data-color="purple"] li.active > a{
+  	box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(203,171,120, 0.4);
+  }
+
+  .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active{
+  	background: #cbab78 !important;
+  	box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(203,171,120, 0.4);
+  }
